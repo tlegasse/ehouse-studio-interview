@@ -1,0 +1,12 @@
+{
+  "name": "Tanner Legasse Test Store",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "shopify theme dev --store=tanner-legasse-sample-store.myshopify.com"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
