@@ -1,75 +1,215 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
       "type": "image-banner",
       "blocks": {
+        "text_qUcpyK": {
+          "type": "text",
+          "settings": {
+            "text": "IN STORES & ONLINE",
+            "text_style": "subtitle"
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "heading": "50% OFF EVERYTHING",
+            "heading_size": "hxxl"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
+            "button_label_1": "WOMEN",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "MEN",
+            "button_link_2": "#",
             "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
+        "text_qUcpyK",
         "heading",
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image": "shopify://shop_images/hero-image.jpg",
+        "image_overlay_opacity": 0,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
         "image_behavior": "none",
+        "desktop_content_position": "middle-left",
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-1",
         "stack_images_on_mobile": false,
-        "show_text_below": false
+        "mobile_content_alignment": "center",
+        "show_text_below": true
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "image_with_text_VpBFbX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_KNgphK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Vacay This Way",
+            "heading_size": "h1"
+          }
+        },
+        "text_ng3q7G": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Everything you need for your summer get away!</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_qxbc9w": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP SUMMER ESSENTIALS",
+            "button_link": "#",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_KNgphK",
+        "text_ng3q7G",
+        "button_qxbc9w"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "image": "shopify://shop_images/vacay-image.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 56,
+        "padding_bottom": 24
+      }
+    },
+    "multicolumn_jCTXTd": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_DnU4UR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/new-arrivals-image.jpg",
+            "title": "NEW ARRIVALS",
+            "text": "<p>Our latest Summer styles. Fresh. Fun. Fabulous.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_J6t3kk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/dorm-image.jpg",
+            "title": "COLLEGE BOUND",
+            "text": "<p>New places and new faces. Same great style.</p>",
+            "link_label": "SHOP DORM DECOR",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "column_DnU4UR",
+        "column_J6t3kk"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
         "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_PXd8pC": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_yrNWAP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/shipping-icon.svg",
+            "title": "",
+            "text": "<p><strong>FREE SHIPPING ON</strong></p><p><strong>ALL ORDERS</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bEewEd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/icon-free-returns.svg",
+            "title": "",
+            "text": "<p><strong>FREE RETURNSON</strong></p><p><strong>ALL ORDERS</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mrVU8T": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/icon-secure-checkout.svg",
+            "title": "",
+            "text": "<p><strong>SAFE & SECURE</strong></p><p><strong>CHECKOUT</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_yrNWAP",
+        "column_bEewEd",
+        "column_mrVU8T"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "image_with_text_VpBFbX",
+    "multicolumn_jCTXTd",
+    "multicolumn_PXd8pC"
   ]
 }
