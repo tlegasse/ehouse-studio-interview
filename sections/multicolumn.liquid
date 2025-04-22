@@ -3,14 +3,14 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
     }
   }
 {%- endstyle -%}
@@ -44,7 +44,7 @@
     {%- endunless -%}
     <slider-component class="slider-mobile-gutter">
       <ul
-        class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}"
+        class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %} {% if section.settings.mobile_gap %}multicolumn-list--mobile-gap{% endif %}"
         id="Slider-{{ section.id }}"
         role="list"
       >
@@ -118,16 +118,28 @@
                   </div>
                 </div>
               {%- endif -%}
-              <div class="multicolumn-card__info">
+              <div class="multicolumn-card__info {% if block.settings.content_over_image %}multicolumn-card__info--content-over-image{% endif %}">
                 {%- if block.settings.title != blank -%}
                   <h3 class="inline-richtext">{{ block.settings.title }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
                   <div class="rte">{{ block.settings.text }}</div>
                 {%- endif -%}
+                {%- if block.settings.menu -%}
+                  <div class="multicolumn-card__linklist">
+                    {% for link in block.settings.menu.links %}
+                      <a
+                        class="link"
+                        href="{{ link.url }}"
+                      >
+                      {{- link.title | escape -}}
+                      </a>
+                    {% endfor %}
+                  </div>
+                {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
                   <a
-                    class="link animate-arrow"
+                    class="link"
                     {% if block.settings.link == blank %}
                       role="link" aria-disabled="true"
                     {% else %}
@@ -135,9 +147,6 @@
                     {% endif %}
                   >
                     {{- block.settings.link_label | escape -}}
-                    <span class="svg-wrapper"
-                      ><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span
-                    >
                   </a>
                 {%- endif -%}
               </div>
@@ -385,24 +394,48 @@
       "content": "t:sections.all.padding.section_padding_heading"
     },
     {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
+      "type": "header",
+      "content": "t:sections.multicolumn.blocks.column.settings.content_padding.heading",
     },
     {
       "type": "range",
-      "id": "padding_bottom",
+      "id": "padding_top_desktop",
       "min": 0,
       "max": 100,
-      "step": 4,
+      "step": 2,
       "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "label": "t:sections.multicolumn.blocks.column.settings.content_padding.top_desktop",
+      "default": 46
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.multicolumn.blocks.column.settings.content_padding.top_mobile",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.multicolumn.blocks.column.settings.content_padding.bottom_desktop",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.multicolumn.blocks.column.settings.content_padding.bottom_mobile",
+      "default": 0
     }
   ],
   "blocks": [
@@ -449,50 +482,6 @@
           "id": "menu",
           "label": "t:sections.multicolumn.blocks.column.settings.menu.label",
         },
-        {
-          "type": "header",
-          "content": "t:sections.multicolumn.blocks.column.settings.content_padding.heading",
-        },
-        {
-          "type": "range",
-          "id": "top_desktop",
-          "min": 0,
-          "max": 100,
-          "step": 2,
-          "unit": "px",
-          "label": "t:sections.multicolumn.blocks.column.settings.content_padding.top_desktop",
-          "default": 46
-        },
-        {
-          "type": "range",
-          "id": "top_mobile",
-          "min": 0,
-          "max": 100,
-          "step": 2,
-          "unit": "px",
-          "label": "t:sections.multicolumn.blocks.column.settings.content_padding.top_mobile",
-          "default": 20
-        },
-        {
-          "type": "range",
-          "id": "bottom_desktop",
-          "min": 0,
-          "max": 100,
-          "step": 2,
-          "unit": "px",
-          "label": "t:sections.multicolumn.blocks.column.settings.content_padding.bottom_desktop",
-          "default": 52
-        },
-        {
-          "type": "range",
-          "id": "bottom_mobile",
-          "min": 0,
-          "max": 100,
-          "step": 2,
-          "unit": "px",
-          "label": "t:sections.multicolumn.blocks.column.settings.content_padding.bottom_mobile",
-          "default": 0
-        }
       ]
     }
   ],

@@ -123,11 +123,7 @@
             "link_label": "",
             "link": "",
             "content_over_image": true,
-            "menu": "",
-            "top_desktop": 46,
-            "top_mobile": 20,
-            "bottom_desktop": 52,
-            "bottom_mobile": 0
+            "menu": "main-menu"
           }
         },
         "column_J6t3kk": {
@@ -139,11 +135,7 @@
             "link_label": "SHOP DORM DECOR",
             "link": "#",
             "content_over_image": true,
-            "menu": "",
-            "top_desktop": 46,
-            "top_mobile": 20,
-            "bottom_desktop": 52,
-            "bottom_mobile": 0
+            "menu": ""
           }
         }
       },
@@ -163,10 +155,12 @@
         "background_style": "none",
         "color_scheme": "",
         "columns_mobile": "1",
-        "mobile_gap": false,
+        "mobile_gap": true,
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top_desktop": 46,
+        "padding_top_mobile": 20,
+        "padding_bottom_desktop": 52,
+        "padding_bottom_mobile": 0
       }
     },
     "multicolumn_PXd8pC": {
@@ -181,11 +175,7 @@
             "link_label": "",
             "link": "",
             "content_over_image": true,
-            "menu": "",
-            "top_desktop": 46,
-            "top_mobile": 20,
-            "bottom_desktop": 52,
-            "bottom_mobile": 0
+            "menu": ""
           }
         },
         "column_bEewEd": {
@@ -197,11 +187,7 @@
             "link_label": "",
             "link": "",
             "content_over_image": true,
-            "menu": "",
-            "top_desktop": 46,
-            "top_mobile": 20,
-            "bottom_desktop": 52,
-            "bottom_mobile": 0
+            "menu": ""
           }
         },
         "column_mrVU8T": {
@@ -213,11 +199,7 @@
             "link_label": "",
             "link": "",
             "content_over_image": true,
-            "menu": "",
-            "top_desktop": 46,
-            "top_mobile": 20,
-            "bottom_desktop": 52,
-            "bottom_mobile": 0
+            "menu": ""
           }
         }
       },
@@ -240,8 +222,10 @@
         "columns_mobile": "1",
         "mobile_gap": false,
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top_desktop": 46,
+        "padding_top_mobile": 20,
+        "padding_bottom_desktop": 52,
+        "padding_bottom_mobile": 0
       }
     }
   },
