@@ -7,20 +7,20 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 990px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
 
-  .section-{{ section.id }}-padding .multicolumn-card__info{
+  .section-{{ section.id }}-padding .multicolumn-card{% if section.settings.content_over_image %}__info{% endif %} {
     padding-top: {{ section.settings.block_padding_top_mobile }}px;
     padding-bottom: {{ section.settings.block_padding_bottom_mobile }}px;
   }
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding .multicolumn-card__info {
+  @media screen and (min-width: 990px) {
+    .section-{{ section.id }}-padding .multicolumn-card{% if section.settings.content_over_image %}__info{% endif %} {
       padding-top: {{ section.settings.block_padding_top_desktop }}px;
       padding-bottom: {{ section.settings.block_padding_bottom_desktop }}px;
     }
@@ -130,7 +130,7 @@
                   </div>
                 </div>
               {%- endif -%}
-              <div class="multicolumn-card__info {% if block.settings.content_over_image %}multicolumn-card__info--content-over-image{% endif %}">
+              <div class="multicolumn-card__info {% if section.settings.content_over_image %}multicolumn-card__info--content-over-image{% endif %}">
                 {%- if block.settings.title != blank -%}
                   <h3 class="inline-richtext">{{ block.settings.title }}</h3>
                 {%- endif -%}
@@ -473,6 +473,12 @@
       "unit": "px",
       "label": "t:sections.multicolumn.blocks.column.settings.block_padding.bottom_mobile",
       "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "content_over_image",
+      "label": "t:sections.multicolumn.blocks.column.settings.content_over_image.label",
+      "default": true
     }
   ],
   "blocks": [
@@ -507,12 +513,6 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.multicolumn.blocks.column.settings.link.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "content_over_image",
-          "label": "t:sections.multicolumn.blocks.column.settings.content_over_image.label",
-          "default": true
         },
         {
           "type": "link_list",
