@@ -268,14 +268,14 @@
               {%- endif -%}
             </account-icon>
           {%- else -%}
-            <div class="customer-account-indicator">
-              <div class="customer-account-indicator__heading">
+            <div class="acconut-link">
+              <div class="acconut-link__heading">
                 <h3 class="h3">
                   {{ 'customer.account.my_account' | t }}
                 </h3>
               </div>
               {% unless customer %}
-                <div class="customer-account-indicator__body">
+                <div class="acconut-link__body">
                   <p>{{ 'customer.account.sign_in' | t }}</p>
                 </div>
               {% endunless %}
