@@ -1362,9 +1362,6 @@
         "header_colors": {
           "content": "Colors",
         },
-        "content_overlap": {
-          "label": "Overlap content on image",
-        },
         "display_border": {
           "label": "Display content section border"
         },
