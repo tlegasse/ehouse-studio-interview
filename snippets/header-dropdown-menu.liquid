@@ -100,17 +100,19 @@
       </li>
     {%- endfor -%}
     {% if section.settings.promo_text and section.settings.promo_destination %}
-      <a
-        href="{{ section.settings.promo_destination }}"
-        class="header__menu-item list-menu__item link link--text focus-inset header__menu-item--promo"
-        {% if link.current %}
-          aria-current="page"
-        {% endif %}
-      >
-        <span>
-          {{- section.settings.promo_text | escape -}}
-        </span>
-      </a>
+      <li>
+        <a
+          href="{{ section.settings.promo_destination }}"
+          class="header__menu-item list-menu__item link link--text focus-inset header__menu-item--promo"
+          {% if link.current %}
+            aria-current="page"
+          {% endif %}
+          >
+          <span>
+            {{- section.settings.promo_text | escape -}}
+          </span>
+        </a>
+      </li>
     {% endif %}
   </ul>
 </nav>
