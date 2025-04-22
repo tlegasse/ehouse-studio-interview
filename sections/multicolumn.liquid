@@ -370,6 +370,12 @@
     },
     {
       "type": "checkbox",
+      "id": "mobile_gap",
+      "label": "t:sections.multicolumn.settings.mobile_column_gap.label",
+      "default": false,
+    },
+    {
+      "type": "checkbox",
       "id": "swipe_on_mobile",
       "default": false,
       "label": "t:sections.multicolumn.settings.swipe_on_mobile.label"
@@ -431,6 +437,61 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.multicolumn.blocks.column.settings.link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "content_over_image",
+          "label": "t:sections.multicolumn.blocks.column.settings.content_over_image.label",
+          "default": true
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "t:sections.multicolumn.blocks.column.settings.menu.label",
+        },
+        {
+          "type": "header",
+          "content": "t:sections.multicolumn.blocks.column.settings.content_padding.heading",
+        },
+        {
+          "type": "range",
+          "id": "top_desktop",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "t:sections.multicolumn.blocks.column.settings.content_padding.top_desktop",
+          "default": 46
+        },
+        {
+          "type": "range",
+          "id": "top_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "t:sections.multicolumn.blocks.column.settings.content_padding.top_mobile",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "bottom_desktop",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "t:sections.multicolumn.blocks.column.settings.content_padding.bottom_desktop",
+          "default": 52
+        },
+        {
+          "type": "range",
+          "id": "bottom_mobile",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "t:sections.multicolumn.blocks.column.settings.content_padding.bottom_mobile",
+          "default": 0
         }
       ]
     }
