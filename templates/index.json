@@ -34,7 +34,13 @@
             "button_style_secondary_1": false,
             "button_label_2": "MEN",
             "button_link_2": "#",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": false,
+            "button_label_3": "Kids",
+            "button_link_3": "#",
+            "button_style_secondary_3": false,
+            "button_label_4": "Home",
+            "button_link_4": "#",
+            "button_style_secondary_4": false
           }
         }
       },
@@ -94,10 +100,11 @@
         "desktop_image_width": "medium",
         "layout": "text_first",
         "image_behavior": "none",
-        "content_layout": "no-overlap",
+        "content_layout": "overlap",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
+        "display_content_border": true,
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 56,
@@ -114,7 +121,13 @@
             "title": "NEW ARRIVALS",
             "text": "<p>Our latest Summer styles. Fresh. Fun. Fabulous.</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "content_over_image": true,
+            "menu": "",
+            "top_desktop": 46,
+            "top_mobile": 20,
+            "bottom_desktop": 52,
+            "bottom_mobile": 0
           }
         },
         "column_J6t3kk": {
@@ -124,7 +137,13 @@
             "title": "COLLEGE BOUND",
             "text": "<p>New places and new faces. Same great style.</p>",
             "link_label": "SHOP DORM DECOR",
-            "link": "#"
+            "link": "#",
+            "content_over_image": true,
+            "menu": "",
+            "top_desktop": 46,
+            "top_mobile": 20,
+            "bottom_desktop": 52,
+            "bottom_mobile": 0
           }
         }
       },
@@ -144,6 +163,7 @@
         "background_style": "none",
         "color_scheme": "",
         "columns_mobile": "1",
+        "mobile_gap": false,
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
@@ -159,7 +179,13 @@
             "title": "",
             "text": "<p><strong>FREE SHIPPING ON</strong></p><p><strong>ALL ORDERS</strong></p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "content_over_image": true,
+            "menu": "",
+            "top_desktop": 46,
+            "top_mobile": 20,
+            "bottom_desktop": 52,
+            "bottom_mobile": 0
           }
         },
         "column_bEewEd": {
@@ -169,7 +195,13 @@
             "title": "",
             "text": "<p><strong>FREE RETURNSON</strong></p><p><strong>ALL ORDERS</strong></p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "content_over_image": true,
+            "menu": "",
+            "top_desktop": 46,
+            "top_mobile": 20,
+            "bottom_desktop": 52,
+            "bottom_mobile": 0
           }
         },
         "column_mrVU8T": {
@@ -179,7 +211,13 @@
             "title": "",
             "text": "<p><strong>SAFE & SECURE</strong></p><p><strong>CHECKOUT</strong></p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "content_over_image": true,
+            "menu": "",
+            "top_desktop": 46,
+            "top_mobile": 20,
+            "bottom_desktop": 52,
+            "bottom_mobile": 0
           }
         }
       },
@@ -200,6 +238,7 @@
         "background_style": "none",
         "color_scheme": "scheme-2",
         "columns_mobile": "1",
+        "mobile_gap": false,
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36

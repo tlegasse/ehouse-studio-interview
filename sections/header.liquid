@@ -247,12 +247,16 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
+      {% if section.settings.display_search_form %}
+        {% render 'header-search-inline', input_id: 'Search-In-Header' %}
+      {% else %}
+        {% render 'header-search', input_id: 'Search-In-Modal' %}
+      {% endif %}
 
       {%- if shop.customer_accounts_enabled -%}
         <a
           href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-          class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
+          class="{% if section.settings.enable_customer_avatar %}header__icon header__icon--account{% endif %} link focus-inset{% if section.settings.menu != blank %} header__link--account header__link small-hide{% endif %}"
           rel="nofollow"
         >
           {%- if section.settings.enable_customer_avatar -%}
@@ -264,7 +268,18 @@
               {%- endif -%}
             </account-icon>
           {%- else -%}
-            <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
+            <div class="customer-account-indicator">
+              <div class="customer-account-indicator__heading">
+                <h3 class="h3">
+                  {{ 'customer.account.my_account' | t }}
+                </h3>
+              </div>
+              {% unless customer %}
+                <div class="customer-account-indicator__body">
+                  <p>{{ 'customer.account.sign_in' | t }}</p>
+                </div>
+              {% endunless %}
+            </div>
           {%- endif -%}
           <span class="visually-hidden">
             {%- liquid
@@ -520,22 +535,6 @@
       "label": "t:sections.header.settings.menu.label"
     },
     {
-      "type": "header",
-      "content": "t:sections.header.settings.promo.heading"
-    },
-    {
-      "type": "text",
-      "id": "promo_text",
-      "label": "t:sections.header.settings.promo.text",
-      "default": "SALE"
-    },
-    {
-      "type": "url",
-      "id": "promo_destination",
-      "label": "t:sections.header.settings.promo.url",
-      "default": "#"
-    },
-    {
       "type": "select",
       "id": "menu_type_desktop",
       "options": [
@@ -584,6 +583,21 @@
       "id": "show_line_separator",
       "default": true,
       "label": "t:sections.header.settings.show_line_separator.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.promo_callout.heading"
+    },
+    {
+      "type": "text",
+      "id": "promo_text",
+      "label": "t:sections.header.settings.promo_callout.text",
+      "default": "SALE"
+    },
+    {
+      "type": "url",
+      "id": "promo_destination",
+      "label": "t:sections.header.settings.promo_callout.url"
     },
     {
       "type": "header",
