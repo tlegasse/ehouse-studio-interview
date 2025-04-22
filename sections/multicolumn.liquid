@@ -140,6 +140,11 @@
                 {%- if block.settings.menu -%}
                   <div class="multicolumn-card__linklist">
                     {% for link in block.settings.menu.links %}
+                      {% unless forloop.first %}
+                        <span class="multicolumn-card__linklist-separator">
+                          |
+                        </span>
+                      {% endunless %}
                       <a
                         class="link"
                         href="{{ link.url }}"
