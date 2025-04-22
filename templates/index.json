@@ -35,10 +35,10 @@
             "button_label_2": "MEN",
             "button_link_2": "#",
             "button_style_secondary_2": false,
-            "button_label_3": "Kids",
+            "button_label_3": "KIDS",
             "button_link_3": "#",
             "button_style_secondary_3": false,
-            "button_label_4": "Home",
+            "button_label_4": "HOME",
             "button_link_4": "#",
             "button_style_secondary_4": false
           }
@@ -48,6 +48,9 @@
         "text_qUcpyK",
         "heading",
         "button"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {img {object-fit: cover; object-position: 86%; }}"
       ],
       "settings": {
         "image": "shopify://shop_images/hero-image.jpg",
@@ -97,18 +100,18 @@
       "settings": {
         "image": "shopify://shop_images/vacay-image.jpg",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "large",
         "layout": "text_first",
         "image_behavior": "none",
         "content_layout": "overlap",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "display_content_border": true,
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 56,
-        "padding_bottom": 24
+        "padding_bottom": 36
       }
     },
     "multicolumn_jCTXTd": {
@@ -122,7 +125,6 @@
             "text": "<p>Our latest Summer styles. Fresh. Fun. Fabulous.</p>",
             "link_label": "",
             "link": "",
-            "content_over_image": true,
             "menu": "main-menu"
           }
         },
@@ -134,7 +136,6 @@
             "text": "<p>New places and new faces. Same great style.</p>",
             "link_label": "SHOP DORM DECOR",
             "link": "#",
-            "content_over_image": true,
             "menu": ""
           }
         }
@@ -157,10 +158,13 @@
         "columns_mobile": "1",
         "mobile_gap": true,
         "swipe_on_mobile": false,
-        "padding_top_desktop": 46,
-        "padding_top_mobile": 20,
-        "padding_bottom_desktop": 52,
-        "padding_bottom_mobile": 0
+        "padding_top": 36,
+        "padding_bottom": 68,
+        "block_padding_top_desktop": 46,
+        "block_padding_top_mobile": 28,
+        "block_padding_bottom_desktop": 52,
+        "block_padding_bottom_mobile": 0,
+        "content_over_image": true
       }
     },
     "multicolumn_PXd8pC": {
@@ -174,7 +178,6 @@
             "text": "<p><strong>FREE SHIPPING ON</strong></p><p><strong>ALL ORDERS</strong></p>",
             "link_label": "",
             "link": "",
-            "content_over_image": false,
             "menu": ""
           }
         },
@@ -186,7 +189,6 @@
             "text": "<p><strong>FREE RETURNSON</strong></p><p><strong>ALL ORDERS</strong></p>",
             "link_label": "",
             "link": "",
-            "content_over_image": false,
             "menu": ""
           }
         },
@@ -198,7 +200,6 @@
             "text": "<p><strong>SAFE & SECURE</strong></p><p><strong>CHECKOUT</strong></p>",
             "link_label": "",
             "link": "",
-            "content_over_image": false,
             "menu": ""
           }
         }
@@ -222,10 +223,13 @@
         "columns_mobile": "1",
         "mobile_gap": false,
         "swipe_on_mobile": false,
-        "padding_top_desktop": 46,
-        "padding_top_mobile": 20,
-        "padding_bottom_desktop": 52,
-        "padding_bottom_mobile": 0
+        "padding_top": 60,
+        "padding_bottom": 52,
+        "block_padding_top_desktop": 0,
+        "block_padding_top_mobile": 20,
+        "block_padding_bottom_desktop": 0,
+        "block_padding_bottom_mobile": 20,
+        "content_over_image": false
       }
     }
   },
