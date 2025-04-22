@@ -223,7 +223,7 @@
       {%- endif -%}
     {%- endif -%}
 
-    <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
+    <div class="header__actions{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
       <div class="desktop-localization-wrapper">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <localization-form class="small-hide medium-hide" data-prevent-hide>
@@ -254,19 +254,20 @@
       {% endif %}
 
       {%- if shop.customer_accounts_enabled -%}
-        <a
-          href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-          class="{% if section.settings.enable_customer_avatar %}header__icon header__icon--account{% endif %} link focus-inset{% if section.settings.menu != blank %} header__link--account header__link small-hide{% endif %}"
-          rel="nofollow"
-        >
           {%- if section.settings.enable_customer_avatar -%}
-            <account-icon>
-              {%- if customer and customer.has_avatar? -%}
-                {{ customer | avatar }}
-              {%- else -%}
-                <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
-              {%- endif -%}
-            </account-icon>
+            <a
+              href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+              class="{% if section.settings.enable_customer_avatar %}header__icon header__icon--account{% endif %} link focus-inset{% if section.settings.menu != blank %} header__link--account header__link small-hide{% endif %}"
+              rel="nofollow"
+            >
+              <account-icon>
+                {%- if customer and customer.has_avatar? -%}
+                  {{ customer | avatar }}
+                {%- else -%}
+                  <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
+                {%- endif -%}
+              </account-icon>
+            </a>
           {%- else -%}
             <div class="acconut-link">
               <div class="acconut-link__heading">
@@ -275,9 +276,15 @@
                 </h3>
               </div>
               {% unless customer %}
-                <div class="acconut-link__body">
-                  <p>{{ 'customer.account.sign_in' | t }}</p>
-                </div>
+                <a
+                  href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+                  class="{% if section.settings.enable_customer_avatar %}header__icon header__icon--account{% endif %} link focus-inset{% if section.settings.menu != blank %} header__link--account header__link small-hide{% endif %}"
+                  rel="nofollow"
+                >
+                  <p class="acconut-link__body">
+                    <span>{{ 'customer.account.sign_in' | t }}</span>
+                  </p>
+                </a>
               {% endunless %}
             </div>
           {%- endif -%}
@@ -290,7 +297,6 @@
               endif
             -%}
           </span>
-        </a>
       {%- endif -%}
 
       {%- for block in section.blocks -%}
