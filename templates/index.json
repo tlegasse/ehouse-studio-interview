@@ -174,7 +174,7 @@
             "text": "<p><strong>FREE SHIPPING ON</strong></p><p><strong>ALL ORDERS</strong></p>",
             "link_label": "",
             "link": "",
-            "content_over_image": true,
+            "content_over_image": false,
             "menu": ""
           }
         },
@@ -186,7 +186,7 @@
             "text": "<p><strong>FREE RETURNSON</strong></p><p><strong>ALL ORDERS</strong></p>",
             "link_label": "",
             "link": "",
-            "content_over_image": true,
+            "content_over_image": false,
             "menu": ""
           }
         },
@@ -198,7 +198,7 @@
             "text": "<p><strong>SAFE & SECURE</strong></p><p><strong>CHECKOUT</strong></p>",
             "link_label": "",
             "link": "",
-            "content_over_image": true,
+            "content_over_image": false,
             "menu": ""
           }
         }
