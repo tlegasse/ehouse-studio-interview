@@ -98,6 +98,7 @@ I decided to add the "Sale" as an optional link, and keep it out of any menu. If
 
 The coding task took me around the alotted 8 hours. I was able to complete the primary objectives with minimal tablet styling. The code can be reviewed at any time on the main branch of the repo. I'll be looking forward to any feedback!
 
+
 ---
 
 
@@ -105,7 +106,7 @@ The coding task took me around the alotted 8 hours. I was able to complete the p
 
 
 
-# General notes and planning from implementation
+# General notes
 I'm going to start with the Shopify Dawn theme, which I believe to have reasonable default sections, and generally feel like its approach to theme features primarily using vanilla Javascript and web components leads to maintainable themes over long maintenance. I also don't see anything in the Figma doc that stands out as difficult with Dawn.
 
 
@@ -135,8 +136,8 @@ The section is extended to include the following settings:
 - `Promo Destination` (`url`): Promo destination
 
 
-# Sections
-## Image Hero
+## Sections
+### Image Hero
 The section is extended to include the following options:
 
 
@@ -153,12 +154,12 @@ The "Image banner" section's "Buttons" block is extended to include the followin
 - `Outline style` (`checkbox`)
 
 
-## Image with Text Side-by-side
+### Image with Text Side-by-side
 The "Image with text" section is extended to include the following option:
 - `Display content section border` (`checkbox`): Causes a border to display around the content section with additional section padding.
 
 
-## New Arrivals, College Bound and Value Prop Callouts
+### New Arrivals, College Bound and Value Prop Callouts
 The "Multicolumn section is extended to include the following options:
 - `Display Mobile Gap` (`checkbox`)
 
