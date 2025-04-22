@@ -330,6 +330,10 @@
 @media screen and (max-width: 749px) {
   .banner--mobile-bottom:not(.banner--stacked) .banner__content {
     order: 2;
+    max-width: calc(100% - 2rem);
+    border: 1px solid #D8D8D8;
+    margin-top: -10.7rem;
+    background: rgb(var(--color-background));
   }
 
   .banner:not(.banner--mobile-bottom) .field__input,
@@ -351,6 +355,10 @@
 
 .banner--mobile-bottom .banner__box {
   padding: 4rem 3.5rem;
+
+  @media screen and (max-width: 990px) {
+    padding: 2.2rem 1.7rem;
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -404,6 +412,11 @@
   color: rgba(var(--color-foreground), 1);
   line-height: 1;
   letter-spacing: 0.0125rem;
+
+  @media screen and (max-width: 990px) {
+    font-size: 1.4rem;
+    letter-spacing: 0.0088rem;
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -446,6 +459,11 @@
   letter-spacing: 0.5rem;
   margin-top: 2.8rem;
   line-height: 105%;
+
+  @media screen and (max-width: 990px) {
+    font-size: 3.8rem;
+    letter-spacing: 0.0177rem;
+  }
 }
 
 .banner__box .banner__heading + * {
@@ -457,6 +475,10 @@
   flex-wrap: wrap;
   gap: 2rem;
   word-break: break-word;
+
+  @media screen and (max-width: 990px) {
+    gap: 1.6rem;
+  }
 }
 
 @media screen and (max-width: 749px) {
@@ -466,7 +488,7 @@
 
   .banner--content-align-mobile-center .banner__buttons--multiple > * {
     flex-grow: 1;
-    min-width: 22rem;
+    width: calc(50% - 1.6rem / 2);
   }
 }
 

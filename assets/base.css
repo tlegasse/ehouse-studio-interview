@@ -1306,6 +1306,11 @@ button.shopify-payment-button__button--unbranded {
   overflow: hidden;
   font-weight: 700;
   letter-spacing: 0.2rem;
+
+  @media screen and (max-width: 990px) {
+    font-size: 1.2rem;
+    padding: 0 2.4rem;
+  }
 }
 
 .button--tertiary {
@@ -2479,7 +2484,7 @@ input[type='checkbox'] {
   }
 
   .header--mobile-left {
-    grid-template-columns: auto 2fr 1fr;
+    grid-template-columns: auto 1fr auto;
   }
 }
 
@@ -3617,7 +3622,7 @@ details-disclosure > details {
 }
 
 /* Headre account link */
-.acconut-link {
+.account-link {
   --color-link: 74, 74, 74;
   --color-foreground: 74, 74, 74;
   text-align: center;
@@ -3629,18 +3634,18 @@ details-disclosure > details {
   gap: 0.3rem;
 }
 
-.acconut-link h3,
-.acconut-link p {
+.account-link h3,
+.account-link p {
   margin: 0;
   line-height: 100%;
 }
 
-.acconut-link h3 {
+.account-link h3 {
   font-size: 1.4rem;
   text-decoration: none;
 }
 
-.acconut-link p {
+.account-link p {
   font-size: 1.2rem;
 }
 
@@ -3681,4 +3686,11 @@ details-disclosure > details {
 
 .search-form--inline .field__button svg path {
   fill: #767676;
+}
+
+@media screen and (max-width: 990px) {
+  .search-form--inline,
+  .account-link {
+    display: none;
+  }
 }

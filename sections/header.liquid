@@ -19,7 +19,6 @@
 <style>
   header-drawer {
     justify-self: start;
-    margin-left: -1.2rem;
   }
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
@@ -78,7 +77,7 @@
 
 {%- style -%}
   .header {
-    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
+    padding: {{ section.settings.padding_top | times: 0.9 | round: 0 }}px 2.7rem {{ section.settings.padding_bottom | times: 0.9 | round: 0 }}px 2.7rem;
   }
 
   .section-header {
@@ -269,8 +268,8 @@
               </account-icon>
             </a>
           {%- else -%}
-            <div class="acconut-link">
-              <div class="acconut-link__heading">
+            <div class="account-link">
+              <div class="account-link__heading">
                 <h3 class="h3">
                   {{ 'customer.account.my_account' | t }}
                 </h3>
@@ -281,7 +280,7 @@
                   class="{% if section.settings.enable_customer_avatar %}header__icon header__icon--account{% endif %} link focus-inset{% if section.settings.menu != blank %} header__link--account header__link small-hide{% endif %}"
                   rel="nofollow"
                 >
-                  <p class="acconut-link__body">
+                  <p class="account-link__body">
                     <span>{{ 'customer.account.sign_in' | t }}</span>
                   </p>
                 </a>
