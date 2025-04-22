@@ -2627,7 +2627,7 @@
             "menu": {
               "label": "Menu"
             },
-            "content_padding": {
+            "block_padding": {
               "heading": "Content Padding",
               "top_desktop": "Top Desktop",
               "top_mobile": "Top Mobile",
